@@ -1,6 +1,6 @@
 autoscale: true
 
-[.background-color: #336791]
+
 [.footer: Slide 1 / 65]
 
 ## PostgreSQL for the Absolute Beginner
@@ -11,7 +11,7 @@ autoscale: true
 
 ---
 
-[.background-color: #336791]
+
 [.footer: Slide 2 / 65]
 
 ## About This Training
@@ -23,7 +23,7 @@ autoscale: true
 
 ---
 
-[.background-color: #336791]
+
 [.footer: Slide 3 / 65]
 
 ## Today's Agenda
@@ -39,7 +39,7 @@ autoscale: true
 
 ---
 
-[.background-color: #336791]
+
 [.footer: Slide 4 / 65]
 
 ## Training Materials
@@ -60,7 +60,7 @@ Sample database:
 
 ---
 
-[.background-color: #8B4513]
+
 [.footer: Slide 5 / 65]
 
 ## Let's Get Connected!
@@ -76,7 +76,7 @@ Sample database:
 
 ---
 
-[.background-color: #8B4513]
+
 [.footer: Slide 6 / 65]
 
 ## Prerequisites
@@ -95,7 +95,7 @@ docker compose version
 
 ---
 
-[.background-color: #8B4513]
+
 [.footer: Slide 7 / 65]
 
 ## Step 1: Clone the Repository
@@ -112,7 +112,6 @@ Or download as ZIP from GitHub if you don't have git.
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 8 / 65]
 
 ## Step 2: Start PostgreSQL
@@ -134,7 +133,6 @@ abc123...      postgis/postgis:18-3.6   Up 10 seconds  0.0.0.0:5432->5432/tcp
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 9 / 65]
 
 ## Step 3: Install a psql Client
@@ -167,7 +165,6 @@ Cross-Platform GUIs
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 10 / 65]
 
 ## Mac: Homebrew (Recommended)
@@ -188,7 +185,6 @@ Alternative: Install Postgres.app and use its bundled psql.
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 11 / 65]
 
 ## Windows / GUI Users
@@ -206,7 +202,6 @@ pgAdmin includes a Query Tool that works like psql.
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 12 / 65]
 
 ## Step 4: Connect to PostgreSQL
@@ -229,7 +224,6 @@ You're connected! 🎉
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 13 / 65]
 
 ## Step 5: Create Database and Load Bluebox
@@ -257,7 +251,6 @@ psql postgresql://postgres:training@localhost:5432/bluebox -f bluebox_data.sql
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 14 / 65]
 
 ## Step 6: Verify Your Setup
@@ -284,7 +277,6 @@ If you see 7836 films, you're all set! ✅
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 15 / 65]
 
 ## Troubleshooting: Last Resort
@@ -305,7 +297,6 @@ This works but isn't ideal for learning psql workflows.
 
 ---
 
-[.background-color: #2F4F4F]
 [.footer: Slide 16 / 65]
 
 ## Why Postgres?
@@ -325,7 +316,6 @@ This works but isn't ideal for learning psql workflows.
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 17 / 65]
 
 ## Running Postgres
@@ -334,7 +324,6 @@ This works but isn't ideal for learning psql workflows.
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 18 / 65]
 
 ## Running Postgres - Options
@@ -357,7 +346,6 @@ This works but isn't ideal for learning psql workflows.
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 19 / 65]
 
 ## Connecting to PostgreSQL
@@ -376,7 +364,6 @@ Connection to remote locations
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 20 / 65]
 
 ## GUI Tools
@@ -399,14 +386,12 @@ Connection to remote locations
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 21 / 65]
 
 ## psql Introduction
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 22 / 65]
 
 ## psql - The Postgres CLI
@@ -422,7 +407,6 @@ bluebox=#
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 23 / 65]
 
 ## Essential psql Commands
@@ -439,7 +423,6 @@ bluebox=#
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 24 / 65]
 
 ## More psql Commands
@@ -454,7 +437,6 @@ bluebox=#
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 25 / 65]
 
 ## psql Tips
@@ -477,7 +459,6 @@ SELECT * FROM film;
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 26 / 65]
 
 ## psql Formatting
@@ -495,7 +476,6 @@ Default output can be messy when columns are wide:
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 27 / 65]
 
 ## Expanded Display: \x auto
@@ -519,7 +499,6 @@ email | alice@test.com
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 28 / 65]
 
 ## Pretty Unicode Borders
@@ -542,7 +521,6 @@ Makes output much easier to read!
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 29 / 65]
 
 ## More Useful psql Settings
@@ -570,7 +548,6 @@ on host "localhost" at port "5432".
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 30 / 65]
 
 ## Making NULLs Visible
@@ -594,14 +571,12 @@ Now you can clearly see which values are actually NULL!
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 31 / 65]
 
 ## Users and Permissions
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 32 / 65]
 
 ## Postgres Roles
@@ -618,7 +593,6 @@ CREATE ROLE readonly;
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 33 / 65]
 
 ## Role Attributes
@@ -639,7 +613,6 @@ Common attributes:
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 34 / 65]
 
 ## ⚠️ Password Security: Don't Do This!
@@ -663,7 +636,6 @@ Enter it again: ********
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 35 / 65]
 
 ## Password Hashing in Postgres
@@ -678,7 +650,6 @@ Hashed passwords are stored in `pg_authid.rolpassword`
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 36 / 65]
 
 ## Password Best Practices
@@ -700,7 +671,6 @@ WHERE rolpassword LIKE 'md5%';
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 37 / 65]
 
 ## Granting Privileges
@@ -721,7 +691,6 @@ GRANT SELECT, INSERT, UPDATE ON bluebox.rental TO app_user;
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 38 / 65]
 
 ## Manage Privileges with Groups
@@ -740,7 +709,6 @@ GRANT SELECT ON ALL TABLES IN SCHEMA bluebox TO data_analytics;
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 39 / 65]
 
 ## Grant Users Role Membership
@@ -758,7 +726,6 @@ GRANT data_analytics TO maria;
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 40 / 65]
 
 ## View Role Memberships
@@ -781,7 +748,6 @@ Maria is a member of `data_analytics` - she inherits its permissions!
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 41 / 65]
 
 ## Schemas
@@ -790,7 +756,6 @@ Maria is a member of `data_analytics` - she inherits its permissions!
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 42 / 65]
 
 ## What is a Schema?
@@ -803,7 +768,6 @@ A **schema** is a namespace within a database
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 43 / 65]
 
 ## Default Schema
@@ -818,7 +782,6 @@ CREATE TABLE public.my_table (id int);
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 44 / 65]
 
 ## Creating Schemas
@@ -835,7 +798,6 @@ Bluebox uses `bluebox` schema to organize all its tables
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 45 / 65]
 
 ## Schema Search Path
@@ -854,7 +816,6 @@ SELECT * FROM film;  -- Same as bluebox.film
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 46 / 65]
 
 ## Bluebox Schema
@@ -878,7 +839,6 @@ SET search_path TO bluebox, public;
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 47 / 65]
 
 ## ALTER User Search Path
@@ -893,14 +853,12 @@ SELECT * FROM film;  -- Same as bluebox.film
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 48 / 65]
 
 ## Object and Data Types
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 49 / 65]
 
 ## Database Objects
@@ -913,7 +871,6 @@ SELECT * FROM film;  -- Same as bluebox.film
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 50 / 65]
 
 ## Common Data Types
@@ -945,7 +902,6 @@ Other
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 51 / 65]
 
 ## ⏰ Time: Use TIMESTAMPTZ!
@@ -969,7 +925,6 @@ TIMESTAMPTZ handles daylight saving automatically!
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 52 / 65]
 
 ## 💰 Use NUMERIC, Not MONEY!
@@ -1000,7 +955,6 @@ NUMERIC stores exact values - no floating point errors!
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 53 / 65]
 
 ## 🎯 Custom Data Types: ENUM
@@ -1029,7 +983,6 @@ WHERE rating = 'PG-13' LIMIT 3;
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 54 / 65]
 
 ## Creating a Table
@@ -1049,7 +1002,6 @@ CREATE TABLE bluebox.customer_review (
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 55 / 65]
 
 ## Add Yourself as a Customer
@@ -1077,7 +1029,6 @@ Note: this is a great use of the Postgres feature `RETURNING`
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 56 / 65]
 
 ## Find Films to Review
@@ -1100,7 +1051,6 @@ WHERE title IN ('The Dark Knight', 'Inception',
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 57 / 65]
 
 ## Insert Your Reviews
@@ -1120,7 +1070,6 @@ VALUES
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 58 / 65]
 
 ## Querying Your Reviews
@@ -1145,7 +1094,6 @@ ORDER BY r.created_at DESC;
 
 ---
 
-[.background-color: #008080]
 [.footer: Slide 59 / 65]
 
 ## Bluebox Tables
@@ -1169,14 +1117,12 @@ ORDER BY r.created_at DESC;
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 60 / 65]
 
 ## Extensions
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 61 / 65]
 
 ## What are Extensions?
@@ -1190,7 +1136,6 @@ Extensions add functionality to Postgres:
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 62 / 65]
 
 ## Contrib Extensions
@@ -1212,7 +1157,6 @@ Bundled with Postgres - just `CREATE EXTENSION name;`
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 63 / 65]
 
 ## Popular Third-Party Extensions
@@ -1225,7 +1169,6 @@ Bundled with Postgres - just `CREATE EXTENSION name;`
 
 ---
 
-[.background-color: #336791]
 [.footer: Slide 64 / 65]
 
 ## Hour 1 Summary
@@ -1241,7 +1184,6 @@ Bundled with Postgres - just `CREATE EXTENSION name;`
 
 ---
 
-[.background-color: #336791]
 [.footer: Slide 65 / 65]
 
 ## Questions?

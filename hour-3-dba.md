@@ -1,6 +1,5 @@
 autoscale: true
 
-[.background-color: #336791]
 [.footer: Slide 1 / 79]
 
 ## Postgres DBA Basics
@@ -11,7 +10,6 @@ autoscale: true
 
 ---
 
-[.background-color: #336791]
 [.footer: Slide 2 / 79]
 
 ## Hour 3 Topics
@@ -38,14 +36,12 @@ autoscale: true
 
 ---
 
-[.background-color: #2F4F4F]
 [.footer: Slide 3 / 79]
 
 ## Postgres Hosting Options
 
 ---
 
-[.background-color: #2F4F4F]
 [.footer: Slide 4 / 79]
 
 ## Where to Run Postgres
@@ -69,7 +65,6 @@ autoscale: true
 
 ---
 
-[.background-color: #2F4F4F]
 [.footer: Slide 5 / 79]
 
 ## Self-Managed vs Managed
@@ -84,7 +79,6 @@ autoscale: true
 
 ---
 
-[.background-color: #2F4F4F]
 [.footer: Slide 6 / 79]
 
 ## When to Choose Self-Managed
@@ -97,7 +91,6 @@ autoscale: true
 
 ---
 
-[.background-color: #2F4F4F]
 [.footer: Slide 7 / 79]
 
 ## When to Choose Managed
@@ -110,14 +103,12 @@ autoscale: true
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 8 / 79]
 
 ## Backups
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 9 / 79]
 
 ## Backup Strategy Fundamentals
@@ -129,7 +120,6 @@ autoscale: true
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 10 / 79]
 
 ## Backup Choices
@@ -140,10 +130,9 @@ autoscale: true
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 11 / 79]
 
-## pg_dump - Logical Backup
+## pg_dump - a copy, not a real backup
 
 Note: must have PG 18 installed for this to work locally
 
@@ -161,7 +150,6 @@ pg_dump -t 'bluebox.film' -t 'bluebox.rental' \
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 12 / 79]
 
 ## pg_dump Options
@@ -177,7 +165,6 @@ pg_dump -t 'bluebox.film' -t 'bluebox.rental' \
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 13 / 79]
 
 ## pg_dumpall - All Databases
@@ -192,7 +179,6 @@ pg_dumpall --globals-only -d postgresql://postgres:training@localhost:5432/postg
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 14 / 79]
 
 ## pg_restore - Restoring Backups
@@ -210,7 +196,6 @@ pg_restore -t film -h localhost -U postgres -d bluebox_new bluebox.dump
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 15 / 79]
 
 ## pg_basebackup - Physical Backup
@@ -225,7 +210,6 @@ Unlike pg_dump (logical), pg_basebackup:
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 16 / 79]
 
 
@@ -233,7 +217,6 @@ Unlike pg_dump (logical), pg_basebackup:
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 17 / 79]
 
 ## 🔧 Hands-On: pg_basebackup
@@ -258,7 +241,6 @@ Note: This backup is inside the container. In production, you'd mount an externa
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 18 / 79]
 
 ## pg_basebackup Options
@@ -275,7 +257,6 @@ Note: This backup is inside the container. In production, you'd mount an externa
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 19 / 79]
 
 ## Inspect the Backup
@@ -293,7 +274,6 @@ docker exec postgres-training ls -la /backup/full/
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 20 / 79]
 
 ## Verify the Backup Manifest
@@ -316,7 +296,6 @@ The manifest lists every file with checksums for verification.
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 21 / 79]
 
 ## Understanding WAL
@@ -325,7 +304,6 @@ The manifest lists every file with checksums for verification.
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 22 / 79]
 
 ## What is WAL?
@@ -339,14 +317,12 @@ The manifest lists every file with checksums for verification.
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 23 / 79]
 
 ![fit](diagrams/WAL-diagram.png)
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 24 / 79]
 
 ## 🔧 Hands-On: View WAL
@@ -370,7 +346,6 @@ docker exec postgres-training ls -la \
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 25 / 79]
 
 ## Why WAL Matters for Backups: Consistency
@@ -392,7 +367,6 @@ Base Backup (Monday) + WAL files = Any point in time
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 26 / 79]
 
 ## Backup Strategy Example
@@ -409,7 +383,6 @@ Base Backup (Monday) + WAL files = Any point in time
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 27 / 79]
 
 ## Physical Backup Summary
@@ -423,7 +396,6 @@ Base Backup (Monday) + WAL files = Any point in time
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 28 / 79]
 
 ## Other Backup Tools
@@ -434,21 +406,18 @@ Base Backup (Monday) + WAL files = Any point in time
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 29 / 79]
 
 ## Upgrades and Versions
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 30 / 79]
 
 ![inline](diagrams/postgres versions 19.png)
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 31 / 79]
 
 ## Current Support Status
@@ -463,7 +432,6 @@ Base Backup (Monday) + WAL files = Any point in time
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 32 / 79]
 
 ## Minor Version Upgrades
@@ -484,7 +452,6 @@ systemctl restart postgresql
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 33 / 79]
 
 ## 🔧 Minor Upgrade with Docker
@@ -510,7 +477,6 @@ docker exec postgres-training psql -U postgres \
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 34 / 79]
 
 ## Major Version Upgrades - Options
@@ -521,7 +487,6 @@ docker exec postgres-training psql -U postgres \
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 35 / 79]
 
 ## pg_upgrade
@@ -543,7 +508,6 @@ systemctl start postgresql@18-main
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 36 / 79]
 
 ## Pre-Upgrade Checklist
@@ -558,14 +522,12 @@ systemctl start postgresql@18-main
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 37 / 79]
 
 ## DR & HA Concepts
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 38 / 79]
 
 ## Key Terms
@@ -577,7 +539,6 @@ systemctl start postgresql@18-main
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 39 / 79]
 
 ## Streaming Replication
@@ -594,7 +555,6 @@ Primary ──WAL Stream──> Standby (Hot Standby)
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 40 / 79]
 
 ## Setting Up Streaming Replication
@@ -616,7 +576,6 @@ hot_standby = on  # allows queries on the standby
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 41 / 79]
 
 ## Failover Options
@@ -638,7 +597,6 @@ hot_standby = on  # allows queries on the standby
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 42 / 79]
 
 ## Patroni - HA Solution
@@ -662,14 +620,12 @@ Hands-on Patroni is out of scope, but try the official demo:
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 43 / 79]
 
 ## Logical Replication
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 44 / 79]
 
 ## What is Logical Replication?
@@ -683,7 +639,6 @@ Unlike streaming replication:
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 45 / 79]
 
 ## Logical Replication Use Cases
@@ -697,7 +652,6 @@ Unlike streaming replication:
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 46 / 79]
 
 ## 🔧 Hands-On: Logical Replication
@@ -720,7 +674,6 @@ docker ps | grep postgres
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 47 / 79]
 
 ## Step 1: Prepare the Subscriber
@@ -772,7 +725,6 @@ CREATE TABLE bluebox.film (
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 48 / 79]
 
 ## Step 2: Create Publication
@@ -794,7 +746,6 @@ SELECT * FROM pg_publication_tables;
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 49 / 79]
 
 ## Step 3: Create Subscription
@@ -817,7 +768,6 @@ SELECT * FROM pg_stat_subscription;
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 50 / 79]
 
 ## Step 4: Watch It Replicate!
@@ -837,7 +787,6 @@ LIMIT 5;
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 51 / 79]
 
 ## Step 5: Test Live Replication
@@ -862,7 +811,6 @@ WHERE title = 'The Dark Knight';
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 52 / 79]
 
 ## Monitor Replication Status
@@ -883,7 +831,6 @@ FROM pg_replication_slots;
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 53 / 79]
 
 ## Clean Up (Optional)
@@ -898,14 +845,12 @@ DROP PUBLICATION film_pub;
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 54 / 79]
 
 ## Connection Management
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 55 / 79]
 
 ## Connection Settings
@@ -926,7 +871,6 @@ WHERE datname = 'bluebox';
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 56 / 79]
 
 ## The Connection Problem
@@ -951,7 +895,6 @@ ORDER BY state_change;
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 57 / 79]
 
 ## PgBouncer - Connection Pooler
@@ -968,7 +911,6 @@ App (1000 connections) → PgBouncer → PostgreSQL (20 connections)
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 58 / 79]
 
 ## 🔧 Hands-On: PgBouncer
@@ -988,7 +930,6 @@ docker ps | grep pgbouncer
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 59 / 79]
 
 ## Pool Modes
@@ -1003,7 +944,6 @@ Our Docker setup uses **transaction** mode (most common).
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 60 / 79]
 
 ## Connect Through PgBouncer
@@ -1020,7 +960,6 @@ Both connections work the same - but PgBouncer pools them!
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 61 / 79]
 
 ## PgBouncer Admin Console
@@ -1039,7 +978,6 @@ SHOW HELP;
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 62 / 79]
 
 ## Monitor Pool Statistics
@@ -1060,14 +998,12 @@ SHOW POOLS;
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 63 / 79]
 
 ## Disk, Storage, and Vacuum
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 64 / 79]
 
 ## MVCC - Multi-Version Concurrency Control
@@ -1082,7 +1018,6 @@ PostgreSQL keeps old row versions for:
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 65 / 79]
 
 ## What is Vacuum?
@@ -1102,7 +1037,6 @@ VACUUM FULL bluebox.rental;
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 66 / 79]
 
 ## Autovacuum
@@ -1120,7 +1054,6 @@ autovacuum_vacuum_scale_factor = 0.2
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 67 / 79]
 
 ## Monitoring Table Bloat
@@ -1141,7 +1074,6 @@ LIMIT 10;
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 68 / 79]
 
 ## Table and Index Bloat
@@ -1160,7 +1092,6 @@ Tools for bloat analysis:
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 69 / 79]
 
 ## Disk Space Monitoring
@@ -1186,14 +1117,12 @@ ORDER BY pg_total_relation_size(relid) DESC LIMIT 5;
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 70 / 79]
 
 ## Table Partitioning
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 71 / 79]
 
 ## What is Partitioning?
@@ -1211,7 +1140,6 @@ PostgreSQL automatically routes queries/inserts to the right partition.
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 72 / 79]
 
 ## Why Partition?
@@ -1225,7 +1153,6 @@ Best for: Large tables (100M+ rows), time-series data, archival needs
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 73 / 79]
 
 ## Partition Types
@@ -1238,7 +1165,6 @@ Best for: Large tables (100M+ rows), time-series data, archival needs
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 74 / 79]
 
 ## 🔧 Hands-On: Range Partitioning
@@ -1262,7 +1188,6 @@ CREATE TABLE payment_2025 PARTITION OF bluebox.payment_history
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 75 / 79]
 
 ## Insert & Query Partitioned Tables
@@ -1280,7 +1205,6 @@ WHERE payment_date >= '2025-01-01';
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 76 / 79]
 
 ## Managing Partitions
@@ -1298,7 +1222,6 @@ DROP TABLE payment_2024;  -- or archive to cold storage
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 77 / 79]
 
 ## Partitioning Tips
@@ -1311,7 +1234,6 @@ DROP TABLE payment_2024;  -- or archive to cold storage
 
 ---
 
-[.background-color: #336791]
 [.footer: Slide 78 / 79]
 
 ## Hour 3 Summary
@@ -1329,7 +1251,6 @@ DROP TABLE payment_2024;  -- or archive to cold storage
 
 ---
 
-[.background-color: #336791]
 [.footer: Slide 79 / 79]
 
 ## Questions?

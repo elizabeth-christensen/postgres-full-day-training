@@ -1,6 +1,5 @@
 autoscale: true
 
-[.background-color: #336791]
 [.footer: Slide 1 / 59]
 
 ## Getting Started with SQL in Postgres
@@ -11,7 +10,6 @@ autoscale: true
 
 ---
 
-[.background-color: #336791]
 [.footer: Slide 2 / 59]
 
 ## Hour 2 Topics
@@ -36,7 +34,6 @@ autoscale: true
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 3 / 59]
 
 ## What is CRUD?
@@ -50,7 +47,6 @@ These four operations cover nearly all data manipulation (DML)!
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 4 / 59]
 
 ## SELECT - Reading Data
@@ -75,7 +71,6 @@ LIMIT 5;
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 5 / 59]
 
 ## What are Aggregates?
@@ -96,7 +91,6 @@ Use with `GROUP BY` to aggregate per group
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 6 / 59]
 
 ## SELECT with Aggregates
@@ -125,7 +119,6 @@ ORDER BY release_year DESC LIMIT 5;
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 7 / 59]
 
 ## INSERT - Creating Data
@@ -143,7 +136,6 @@ VALUES (
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 8 / 59]
 
 ## INSERT - What Happens Without Required Fields?
@@ -163,7 +155,6 @@ The table has constraints that protect data integrity!
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 9 / 59]
 
 ## Constraints Protect Your Data
@@ -181,7 +172,6 @@ Constraints catch bad data at the database level — not in app code!
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 10 / 59]
 
 ## UPDATE - Modifying Data
@@ -201,7 +191,6 @@ WHERE film_id = 550;
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 11 / 59]
 
 ## DELETE - Removing Data
@@ -227,7 +216,6 @@ DETAIL: Key (film_id)=(1472668) is referenced from table "inventory".
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 12 / 59]
 
 ## DELETE - Working with Constraints
@@ -250,7 +238,6 @@ DELETE FROM bluebox.film WHERE film_id = 1472668;
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 13 / 59]
 
 ## Constraints
@@ -270,7 +257,6 @@ Rules that enforce data integrity at the database level
 
 ---
 
-[.background-color: #8B4513]
 [.footer: Slide 14 / 59]
 
 #### Constraints: WITHOUT OVERLAPS (new PG 18)
@@ -304,7 +290,6 @@ No more double-booked rentals!
 
 ---
 
-[.background-color: #2F4F4F]
 [.footer: Slide 15 / 59]
 
 ## RETURNING Clause
@@ -325,7 +310,6 @@ RETURNING customer_id, create_date;
 
 ---
 
-[.background-color: #2F4F4F]
 [.footer: Slide 16 / 59]
 
 ## RETURNING OLD/NEW (PG 18)
@@ -349,7 +333,6 @@ No more separate SELECT to see what changed!
 
 ---
 
-[.background-color: #2F4F4F]
 [.footer: Slide 17 / 59]
 
 ## UPSERT with ON CONFLICT
@@ -369,14 +352,12 @@ DO UPDATE SET
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 18 / 59]
 
 ![fit](diagrams/join-types.png)
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 19 / 59]
 
 ## INNER JOIN
@@ -402,7 +383,6 @@ LIMIT 3;
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 20 / 59]
 
 ## LEFT JOIN
@@ -431,7 +411,6 @@ ORDER BY cast_count DESC LIMIT 5;
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 21 / 59]
 
 ## RIGHT JOIN
@@ -451,7 +430,6 @@ GROUP BY f.film_id, f.title;
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 22 / 59]
 
 ## FULL OUTER JOIN
@@ -474,7 +452,6 @@ ORDER BY p.name
 
 ---
 
-[.background-color: #006400]
 [.footer: Slide 23 / 59]
 
 ## Multiple JOINs
@@ -504,14 +481,12 @@ LIMIT 5;
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 24 / 59]
 
 ## Arrays and JSON
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 25 / 59]
 
 ## Arrays in PostgreSQL
@@ -540,7 +515,6 @@ Drama (18), Action (28), Crime (80), Thriller (53)
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 26 / 59]
 
 ## Adding to an Array
@@ -559,7 +533,6 @@ WHERE film_id = 155;
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 27 / 59]
 
 ## Array Operators
@@ -575,7 +548,6 @@ WHERE film_id = 155;
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 28 / 59]
 
 ## Querying Arrays
@@ -606,7 +578,6 @@ WHERE f.title = 'The Dark Knight';
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 29 / 59]
 
 ## JSON vs JSONB
@@ -624,7 +595,6 @@ WHERE f.title = 'The Dark Knight';
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 30 / 59]
 
 ## Working with JSONB
@@ -662,7 +632,6 @@ No schema enforcement - each row can have different structures!
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 31 / 59]
 
 ## JSONB Operators
@@ -679,7 +648,6 @@ No schema enforcement - each row can have different structures!
 
 ---
 
-[.background-color: #191970]
 [.footer: Slide 32 / 59]
 
 ## Querying JSONB
@@ -704,7 +672,6 @@ WHERE data @> '{"director": "Christopher Nolan"}';
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 33 / 59]
 
 ## Window Functions
@@ -721,14 +688,12 @@ Key difference from GROUP BY: window functions keep all rows!
 
 ---
 
-[.background-color: #FFFFFF]
 [.footer: Slide 34 / 59]
 
 ![fit](diagrams/window-functions.png)
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 35 / 59]
 
 ## Running Totals
@@ -755,7 +720,6 @@ ORDER BY payment_date;
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 36 / 59]
 
 ## LAG - Compare to Previous Row
@@ -781,7 +745,6 @@ ORDER BY payment_date;
 
 ---
 
-[.background-color: #800020]
 [.footer: Slide 37 / 59]
 
 ## LEAD - Look Ahead
@@ -814,14 +777,12 @@ LIMIT 5;
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 39 / 59]
 
 ![fit](diagrams/ctes.jpeg)
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 40 / 59]
 
 ## CTE: Calculate Once, Use Multiple Times
@@ -854,7 +815,6 @@ The CTE `customer_totals` is referenced **3 times** - that's the power!
 
 ---
 
-[.background-color: #CC5500]
 [.footer: Slide 41 / 59]
 
 ## Multiple CTEs
@@ -891,7 +851,6 @@ SELECT * FROM top_years;
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 42 / 59]
 
 ## What is PL/pgSQL?
@@ -905,7 +864,6 @@ PostgreSQL's procedural language
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 43 / 59]
 
 ## Real-World Function: Return a Rental
@@ -942,7 +900,6 @@ $$ LANGUAGE plpgsql;
 
 ---
 
-[.background-color: #556B2F]
 [.footer: Slide 44 / 59]
 
 ## Using the Function
@@ -967,14 +924,12 @@ This pattern is common for business logic that needs to:
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 45 / 59]
 
 ## 🔍 Text Search in Postgres
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 46 / 59]
 
 ## Three Ways to Search Text
@@ -988,7 +943,6 @@ This pattern is common for business logic that needs to:
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 47 / 59]
 
 ## Method 1a: Pattern Matching with ILIKE
@@ -1011,7 +965,6 @@ WHERE title ILIKE '%spider%';
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 48 / 59]
 
 ## Method 1b: Pattern Matching with regex
@@ -1036,7 +989,6 @@ WHERE title ~* 'spider-man';
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 49 / 59]
 
 ## Method 2: Full-Text Search
@@ -1061,7 +1013,6 @@ WHERE fulltext @@ to_tsquery('english', 'running');
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 50 / 59]
 
 ## Full-Text Search Operators
@@ -1081,7 +1032,6 @@ WHERE fulltext @@ plainto_tsquery('dark knight batman');
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 51 / 59]
 
 ## How Bluebox fulltext Column Works
@@ -1102,7 +1052,6 @@ CREATE INDEX film_fulltext_idx ON film USING gin(fulltext);
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 52 / 59]
 
 ## Method 3: Vector Search (Semantic)
@@ -1124,7 +1073,6 @@ Real embeddings have 384-1536 dimensions from AI models
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 53 / 59]
 
 ## Vector Search: Sample Data
@@ -1143,7 +1091,6 @@ INSERT INTO movie_vectors VALUES
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 54 / 59]
 
 ## Vector Search: Finding Similar Movies
@@ -1169,7 +1116,6 @@ LIMIT 3;
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 55 / 59]
 
 ## Vector Search: The Big Picture
@@ -1190,7 +1136,6 @@ LIMIT 3;
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 56 / 59]
 
 ## Why Vector Search Matters
@@ -1207,7 +1152,6 @@ Great for AI/ML applications alongside your relational data
 
 ---
 
-[.background-color: #4B0082]
 [.footer: Slide 57 / 59]
 
 ## When to Use Each Method
@@ -1224,7 +1168,6 @@ Combine them! Full-text for keywords, vectors for concepts
 
 ---
 
-[.background-color: #336791]
 [.footer: Slide 58 / 59]
 
 ## Hour 2 Summary
@@ -1239,7 +1182,6 @@ Combine them! Full-text for keywords, vectors for concepts
 
 ---
 
-[.background-color: #336791]
 [.footer: Slide 59 / 59]
 
 ## Questions?
