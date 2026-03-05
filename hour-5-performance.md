@@ -491,6 +491,8 @@ For a 1,000 row table → vacuum at ~250 dead rows
 
 **Usually no!** Defaults work for most workloads. But lots of dead rows can affect performance.
 
+PostgreSQL 18 comes with autovacuum_worker_slots setting which is help to tune autovacuum_max_workers without a restart.
+
 Consider tuning if you see:
 
 - High bloat (> 50% of table size)
