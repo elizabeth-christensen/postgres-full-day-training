@@ -79,7 +79,8 @@ autoscale: true
 | WAL Writer | Flushes WAL to disk |
 | Checkpointer | Periodic full sync |
 | Autovacuum | Cleans dead rows |
-| Stats Collector | Gathers statistics |
+| Logger | Gathers logs |
+| I/O worker | async I/O helper process |
 | Archiver | Archives WAL files |
 
 ---
@@ -141,7 +142,7 @@ Tells the planner how much memory is available for caching
 -- Set higher = planner prefers index scans
 -- Set lower = planner prefers sequential scans
 
-effective_cache_size = 24GB  -- For 32GB system
+effective_cache_size = 16GB  -- For 32GB system
 ```
 
 This is just a hint - doesn't allocate memory
