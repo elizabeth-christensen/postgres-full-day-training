@@ -50,6 +50,8 @@ docker compose up -d
 # 3. Install a psql client (choose one)
 # Mac:
 brew install libpq
+brew link --force libpq
+
 # Windows: Use pgAdmin or install PostgreSQL from postgresql.org
 # Linux:
 apt install postgresql-client
