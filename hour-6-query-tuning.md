@@ -376,11 +376,11 @@ External merge = data exceeded work_mem
 
 ## Finding Slow Queries
 
-pg\_stat\_statements collects query statistics
+pg\_stat\_statements collects cumulative query statistics
 
 ```sql
 -- Add to shared_preload_libraries
-ALTER SYSTEM SET shared_preload_libraries = 'pg\_stat\_statements';
+ALTER SYSTEM SET shared_preload_libraries = 'pg_stat_statements';
 ```
 
 ```bash
@@ -1122,7 +1122,7 @@ SELECT * FROM bluebox.film WHERE EXTRACT(year FROM release_date) = 2024;
 
 - ✅ EXPLAIN for understanding query plans
 - ✅ Reading costs, rows, and actual times
-- ✅ pg_stat_statements for finding problem queries
+- ✅ pg\_stat\_statements for finding problem queries
 - ✅ auto_explain for automatic query plans
 - ✅ Index types: B-tree, GIN, GiST, BRIN
 - ✅ Index strategies: composite, covering, partial

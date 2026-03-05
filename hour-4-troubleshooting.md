@@ -51,7 +51,7 @@ PostgreSQL stores everything as tables - even metadata
 
 - `pg_catalog` schema contains system tables
 - `information_schema` provides SQL-standard views
-- `pg_stat_*` views provide runtime statistics
+- `pg_stat_*` views provide _*cumulative*_ runtime statistics
 
 ---
 
@@ -100,7 +100,7 @@ WHERE relnamespace = 'bluebox'::regnamespace
 [.background-color: #2F4F4F]
 [.footer: Slide 7 / 52]
 
-## pg_stat_activity - Active Sessions
+## pg\_stat\_activity - Active Sessions
 
 ```sql
 SELECT 
@@ -122,7 +122,7 @@ WHERE datname = 'bluebox'
 [.background-color: #2F4F4F]
 [.footer: Slide 8 / 52]
 
-## pg_stat_user_tables
+## pg\_stat\_user\_tables
 
 ```sql
 SELECT relname, n_live_tup, n_dead_tup, last_autovacuum
@@ -147,7 +147,7 @@ WHERE schemaname = 'bluebox' ORDER BY n_live_tup DESC LIMIT 5;
 [.background-color: #2F4F4F]
 [.footer: Slide 9 / 52]
 
-## pg_stat_user_indexes
+## pg\_stat\_user\_indexes
 
 ```sql
 SELECT relname, indexrelname, idx_scan,
@@ -837,7 +837,7 @@ WHERE datname = 'bluebox';
 
 | Open Source | Commercial |
 |-------------|------------|
-| pg_stat_monitor | pganalyze |
+| pg\_stat\_monitor | pganalyze |
 | Prometheus + postgres_exporter | Datadog |
 | Grafana | New Relic |
 | pgwatch2 | Sentry |
