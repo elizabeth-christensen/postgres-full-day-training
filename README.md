@@ -41,7 +41,7 @@ docker compose version
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Snowflake-Labs/postgres-full-day-training.git
+git clone https://github.com/elizabeth-christensen/postgres-full-day-training.git
 cd postgres-full-day-training
 
 # 2. Start PostgreSQL
